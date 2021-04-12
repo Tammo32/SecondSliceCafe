@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>SECOND SLICE cafe</title>
+
+  <!--Import the CSS style sheet-->
+  <!--TODO - link multiple depending on viewport size?-->
+  <link rel="stylesheet" type="text/css" href="_styles/html5doctorreset.css">
+  <link rel="stylesheet" type="text/css" href="_styles/style.css">
+
+
+  <!--Import Google Fonts-->
+  <!--TODO - Change to my fonts  -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Dancing+Script">
+</head>
+
+
+<!--The BODY of the document-->
+<body>
+
+  <!--  Sticky back to top button  -->
+  <!-- Adapted (CSS and JS) from: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
+  <button onclick="topFunction()" id="BTT" title="Back to top"><img src="_icons/up_arrow.png" alt="back to top"></button>
+
+  <div class="flex_container">
+    
+    <!-- Use unordered list for the nav bar links (with #home, #about anchors etc) -->
+
+<!--**************** HEADER/BANNER/NAVBAR section ****************-->
+    <section class="header" id="home">
+
+
+      <!--  Navigation Bar  -->
+      <nav class="navbar" id="navbar">
+        <!--  Import logo  -->
+        <a href="#home" class="colour_logo">
+          <img src="_logos/second-slice-logo.png" alt="colour_logo">
+        </a>
+        <a href="#home" class="title">
+          <p class="second_slice">SECOND SLICE</p>
+          <p class="cafe">cafe</p>
+        </a>
+        <div class="menu_items">
+          <div class="menu_words">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#zerowaste">ZERO-WASTE</a>
+            <a href="#menu">MENU</a>
+            <a href="#contact">CONTACT</a>
+          </div>
+          <div class="social_items">
+            <a href="https://www.instagram.com" class="social_icon">
+              <img src='_icons/instagram.png' alt="Instagram icon" height="25"></a>
+            <a href="https://www.twitter.com" class="social_icon">
+              <img src='_icons/twitter.png' alt="Twitter icon" height="25"></a>
+            <a href="https://www.facebook.com" class="social_icon">
+              <img src='_icons/facebook.png' alt="Facebook icon" height="25"></a>
+          </div>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
+          <div class="hamburger_icon">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </a>
+      </nav>
+
+      <div class="hero_container">
+        <!--  Hero Image
+        Nathan Dumlao. Unsplash. Accessed 17th October 2020.
+          https://unsplash.com/photos/pnmRtTHWqDM -->
+        <img src="_images/hero_image.jpg" class="hero_image" id="hero_image" alt="Hero image">
+
+        <!--   Hero text    -->
+        <h1 class="hero_text">
+          Eating Organic Isn't Just a Trend<br>It's A Return To Tradition
+        </h1>
+
+        <!--   Call to action button   -->
+        <button onclick="document.location='#about';return false;" class="call_to_action" title="enjoy a slice"><span>enjoy a slice</span></button>
+      </div>
+
+    </section>
+
+    <!------------------ ABOUT US section ---------------------->
+    <section class="about" id="about">
+
+      <div class="subtitle_banner">
+        <!--   Import gradient image for banner   -->
+        <img src="_images/submenu-banner.png" alt="submenu gradient">
+        <h2>about us</h2>
+      </div>
+
+      <!--   Create flexbox layout and @media resizing   -->
+      <div class="flex_cont">
+
+        <div class="flex_left">
+          <!-- Mike Kenneally. Unsplash. Accessed 17th October 2020. https://unsplash.com/photos/TD4DBagg2wE -->
+          <img src="_images/beans.jpg" class="image" alt="beans">
+          <!-- Andy Falconer. "Ready for the breakfast rush to start". Unsplash. Accessed 17th October 2020. https://unsplash.com/photos/dwQRixazu9I -->
+          <img src="_images/cafe.jpg" class="image" alt="cafe">
+        </div>
+
+        <div class="flex_center">
+          <h3>A husband and wife team</h3>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+
+          <h3>Our Story and Goals</h3>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class="flex_right">
+          <!-- Kris Atomic. Unsplash. Accessed 17th October 2020. https://unsplash.com/photos/3b2tADGAWnU -->
+          <img src="_images/greenhouse.jpg" class="image" alt="greenhouse">
+          <!-- emma valerio. "d r i e d". Unsplash. Accessed 17th October 2020. https://unsplash.com/photos/acdcAUKeA5A -->
+          <img src="_images/sprigs.jpg" class="image" alt="sprigs">
+        </div>
+
+      </div>
+
+    </section>
+
+    <!------------------ ZERO-WASTE section -------------------->
+    <section class="zerowaste" id="zerowaste">
+
+      <div class="subtitle_banner">
+        <!--   Import gradient image for banner   -->
+        <img src="_images/submenu-banner.png" alt="submenu_gradient">
+        <h2>zero-waste</h2>
+      </div>
+
+      <!--   Create flexbox layout and @media resizing   -->
+      <div class="flex_cont">
+        <div class="flex_left">
+          <h3>All organic!</h3>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <!-- Markus Spiske. "Support yourself – Urban Gardening – self-supply – self-sufficiency". Unsplash. Accessed 17th October 2020. https://unsplash.com/photos/sFydXGrt5OA -->
+          <img src="_images/watering.jpg" class="image" alt="watering">
+        </div>
+
+        <div class="flex_center">
+          <!-- Brooke Lark. Unsplash. Accessed 17th October 2020. https://unsplash.com/photos/YSA1IRkGAsg -->
+          <img src="_images/fruit.jpg" class="image" alt="fruit">
+          <!-- Nathan Dumlao. Unsplash. Accessed 17th October 2020. https://unsplash.com/photos/nBJHO6wmRWw -->
+          <img src="_images/coffeetop.jpg" class="image" alt="coffee top">
+
+          <!-- Download pdf -->
+          <a href="/_downloads/Statement.pdf" download="Mission Statement" class="download_link">
+            Download our mission statement
+          </a>
+        </div>
+
+        <div class="flex_right">
+          <!-- Gabriel Jimenez. "Poor mans garden". Unsplash. Accessed 17th October 2020. https://unsplash.com/photos/jin4W1HqgL4 -->
+          <img src="_images/dirt.jpg" class="image" alt="dirt">
+          <h3>From the Earth</h3>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!------------------ MENU section -------------------------->
+    <section class="menu" id="menu">
+
+      <div class="subtitle_banner">
+        <!--   Import gradient image for banner   -->
+        <img src="_images/submenu-banner.png" alt="submenu_gradient">
+        <h2>our menu</h2>
+      </div>
+
+      <!--   Create flexbox layout and @media resizing   -->
+      <div class="flex_cont">
+
+        <div class="flex_left">
+          <h3>Small bites</h3>
+          <div class="menu_row">
+            <div class="menu_column_item">
+              <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                <li>Item 5</li>
+                <li>Item 6</li>
+                <li>Item 7</li>
+                <li>Item 8</li>
+                <li>Item 9</li>
+              </ul>
+            </div>
+            <div class="menu_column_price">
+              <ul>
+                <li>$8.95</li>
+                <li>$8.95</li>
+                <li>$8.95</li>
+                <li>$8.95</li>
+                <li>$8.95</li>
+                <li>$8.95</li>
+                <li>$8.95</li>
+                <li>$8.95</li>
+                <li>$8.95</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Phil Hearing. Unsplash. Accessed 17th October 2020. https://unsplash.com/photos/kQ8tDksUyu4 -->
+          <img src="_images/muffin.jpg" class="image" alt="muffin">
+        </div>
+
+        <div class="flex_center">
+          <!-- Brooke Lark. Unsplash. Accessed 17th October 2020. https://unsplash.com/photos/jUPOXXRNdcA -->
+          <img src="_images/salad.jpg" class="image" alt="salad">
+          <h3>Main bites</h3>
+          <div class="menu_row">
+            <div class="menu_column_item">
+              <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                <li>Item 5</li>
+                <li>Item 6</li>
+                <li>Item 7</li>
+                <li>Item 8</li>
+                <li>Item 9</li>
+              </ul>
+            </div>
+            <div class="menu_column_price">
+              <ul>
+                <li>$14.95</li>
+                <li>$14.95</li>
+                <li>$14.95</li>
+                <li>$14.95</li>
+                <li>$14.95</li>
+                <li>$14.95</li>
+                <li>$14.95</li>
+                <li>$14.95</li>
+                <li>$14.95</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex_right">
+          <h3>Beverages</h3>
+          <div class="menu_row">
+            <div class="menu_column_item">
+              <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                <li>Item 5</li>
+                <li>Item 6</li>
+                <li>Item 7</li>
+                <li>Item 8</li>
+                <li>Item 9</li>
+              </ul>
+            </div>
+            <div class="menu_column_price">
+              <ul>
+                <li>$4.95</li>
+                <li>$4.95</li>
+                <li>$4.95</li>
+                <li>$4.95</li>
+                <li>$4.95</li>
+                <li>$4.95</li>
+                <li>$4.95</li>
+                <li>$4.95</li>
+                <li>$4.95</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Mike Kenneally. Unsplash. Accessed 17th October 2020. https://unsplash.com/photos/tNALoIZhqV -->
+          <img src="_images/cup_and_beans.jpg" class="image" alt="cup and beans">
+        </div>
+
+      </div>
+    </section>
+
+    <!------------------ CONTACT section ----------------------->
+    <section class="contact" id="contact">
+
+      <div class="subtitle_banner">
+        <!--   Import gradient image for banner   -->
+        <img src="_images/submenu-banner.png" alt="submenu_gradient">
+        <h2>contact us</h2>
+      </div>
+
+      <!--   Create flexbox layout and @media resizing   -->
+      <div class="flex_cont" id="contact_flex_cont">
+        <div class="contact_left">
+          <!-- Ref: https://www.embedgooglemap.net/
+              Modified to be responsive and fit -->
+          <div class="mapouter">
+            <div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=3%20separation%20street%20northcote&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe><a href="https://thevpndeal.com/best-vpn/"></a></div>
+          </div>
+        </div>
+
+
+        <div class="contact_right">
+          <div class="contact_details">
+            <h3 class="contact_title">ADDRESS</h3>
+            <p class="contact_detail">3 Separation St, Northcote VIC 3070</p>
+            <h3 class="contact_title">PHONE</h3>
+            <p class="contact_detail">(03) 9489 8162</p>
+            <h3 class="contact_title">EMAIL</h3>
+            <p class="contact_detail">secondslicecafe@gmail.com</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!------------------ FOOTER section ------------------------>
+    <section class="footer" id="footer">
+
+      <div class="footer_banner">
+
+
+        <div class="footer_column">
+          <p class="footer_author"><span>&#169; Michael Tamasauskas 2020</span></p>
+        </div>
+        <div class="footer_column">
+          <img src="_logos/second-slice-logo-bw.png" alt="submenu_gradient" class="footer_logo" height="25">
+        </div>
+        <div class="footer_column">
+          <a href="https://www.instagram.com" class="social_footer">
+            <img src='_icons/instagram.png' alt="Instagram icon"></a>
+          <a href="https://www.twitter.com" class="social_footer">
+            <img src='_icons/twitter.png' alt="Twitter icon"></a>
+          <a href="https://www.facebook.com" class="social_footer">
+            <img src='_icons/facebook.png' alt="Facebook icon"></a>
+        </div>
+
+
+      </div>
+
+      <div class="purple_footer">
+        <p>
+          This website has been created as part of an assignment in an approved course of study for Curtin University and contains copyright material not created by the author. All copyright material used remains copyright to the respective owners and has been used here pursuant to Section 40 of the Copyright Act 1968 (Commonwealth of Australia). No part of this work may be reproduced without consent of the original copyright owners. See code comments for references.
+        </p>
+      </div>
+
+    </section>
+  </div>
+  <!------------------ SCRIPTS ------------------------------->
+  <!--  Hamburger menu script  -->
+  <script>
+    function hamburgerMenu() {
+      var x = document.getElementById("navbar");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+    }
+  </script>
+
+  <!--  Sticky back to top script  -->
+  <script>
+    //Get the button:
+    mybutton = document.getElementById("BTT");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+  </script>
+</body></html>

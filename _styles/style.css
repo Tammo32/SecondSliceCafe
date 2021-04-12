@@ -1,0 +1,662 @@
+/* Colour Theme Swatches in Hex
+Brown      { color: #66412E; }
+Dark green { color: #445959; }
+Logo green { color: #A5D8D9; }
+White      { color: #FFFFFF; }
+Purple     { color: #C992EA; }
+
+Colour Theme Swatches in RGBA
+Brown      { color: rgba(102, 65, 46, 1); }
+Dark green { color: rgba(68, 89, 89, 1); }
+Logo green { color: rgba(165, 216, 217, 1); }
+White      { color: rgba(255, 255, 255, 1); }
+Purple     { color: rgba(201, 146, 234, 1); }
+
+Colour Theme Swatches in HSLA
+Brown      { color: hsla(20, 37, 29, 1); }
+Dark green { color: hsla(180, 13, 30, 1); }
+Logo green { color: hsla(181, 40, 74, 1); }
+White      { color: hsla(0, 0, 100, 1); }
+Purple     { color: hsla(277, 67, 74, 1); }
+*/
+
+/****************************************************************/
+/*************** GENERAL STYLING ********************************/
+/****************************************************************/
+@font-face {
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+@font-face {
+  font-family: 'Dancing Script';
+}
+
+@font-face {
+  font-family: 'Boulevard Script';
+  src:
+    local('Boulevard-Script'),
+    url(/_fonts/boulevard_script_2/Boulevard-Script.otf),
+    url(/_fonts/boulevard_script_2/Boulevard-Script.ttf);
+}
+
+/* */
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar a {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.hero_image {
+  width: 100%;
+  opacity: 85%;
+  z-index: 3;
+  display: block;
+}
+
+.flex_container {
+  max-width: 2200px;
+  margin: 0 auto;
+  /*  padding 60px 2px;*/
+}
+
+h1 {
+  /* Default for hero_text */
+  font-family: 'Dancing Script';
+  color: white;
+  -webkit-text-stroke: 0.1px rgba(201, 146, 234, 0.3);
+}
+
+h2 {
+  /* Default for subtitle text */
+  font-family: 'Boulevard Script';
+  padding-left: 60px;
+}
+
+h3 {
+  font-family: 'Montserrat';
+  color: #66412E;
+  font-size: 20px;
+  padding: 20px 10px;
+}
+
+p {
+  /* Default for all paragraphs */
+  font-family: 'Montserrat';
+  color: #66412E;
+  padding: 0px 10px 20px;
+}
+
+.subtitle_banner {
+  align-items: center;
+}
+
+.subtitle_banner img {
+  width: 100%;
+  max-width: 2200px;
+  height: 80px;
+  display: block;
+  position: absolute;
+}
+
+.subtitle_banner h2 {
+  position: relative;
+  font-size: 3em;
+  margin-left: 50px;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  color: #C992EA;
+}
+
+/* Sticky back to top button */
+/* Adapted from: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
+#BTT {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  outline: none;
+  background-color: rgba(201, 146, 234, .6);
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#BTT:hover {
+  background-color: rgba(165, 216, 217, .6);
+  border-style: solid;
+  border-color: #C992EA;
+  transition: 0.2s;
+}
+
+/* Call to action button on hero image*/
+.hero_container {
+  position: relative;
+  width: 100%;
+}
+
+.hero_image {
+  width: 100%;
+  height: auto;
+}
+
+.hero_text {
+  position: absolute;
+  display: block;
+  top: 30%;
+  left: 20%;
+  transform: translate(-10%, -50%);
+  -ms-transform: translate(-10%, -50%);
+  font-size: 6vw;
+  max-width: 700px;
+  text-align: center;
+}
+
+.call_to_action {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgba(165, 216, 217, .6);
+  color: #FFFFFF;
+  font-family: 'Dancing Script';
+  font-size: 2em;
+  border-radius: 30px;
+  border-color: #ffffff;
+  padding: 5px 15px 10px;
+  cursor: pointer;
+}
+
+.call_to_action span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.call_to_action span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.call_to_action:hover span {
+  background-color: rgba(201, 146, 234, .6);
+  padding-right: 25px;
+}
+
+.call_to_action:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Responsive flexbox */
+* {
+  box-sizing: border-box;
+}
+
+.flex_cont {
+  display: flex;
+  background-image: url("/_images/submenu-banner.png");
+  background-size: cover;
+
+}
+
+.flex_left {
+  padding: 10px;
+  flex-direction: column;
+  background-color: white;
+  margin: 0px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.flex_center {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  text-align: center;
+  background-color: white;
+  margin: 0px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.flex_right {
+  padding: 10px;
+  flex-direction: column;
+  text-align: right;
+  background-color: white;
+  margin: 0px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  vertical-align: middle;
+  max-width: 100%;
+  opacity: 90%;
+  margin: 2px;
+}
+
+.image:hover {
+  opacity: 100%;
+  transition: .1s;
+}
+
+/* Menu formatting */
+.menu_row {
+  display: flex;
+}
+
+.menu_column_item {
+  flex: 75%;
+  padding: 10px;
+}
+
+.menu_column_price {
+  flex: 25%;
+  padding: 10px;
+}
+
+.menu_row ul {
+  list-style-type: none;
+  font-family: 'Montserrat';
+  text-align: left;
+}
+
+.menu_row li {
+  padding: 2px;
+}
+
+/* Download link format */
+.download_link {
+  text-decoration: none;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  color: #C992EA;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.download_link:hover {
+  transition: .1s;
+  text-decoration: underline;
+  color: #A5D8D9;
+  font-size: 1.1em;
+  transition-timing-function: ease-in-out;
+}
+
+/* Contact us */
+.contact_left {
+  flex: 50%;
+  padding: 10px;
+  flex-direction: column;
+  background-color: white;
+  margin: 0px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact_right {
+  flex: 50%;
+  padding: 10px;
+  flex-direction: column;
+  text-align: left;
+  background-color: white;
+  margin: 0px 10px;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+
+}
+
+.contact_detail {
+  text-align: right;
+}
+
+/* Embedded map */
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 500px;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 500px;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* FOOTER */
+.purple_footer {
+  position: absolute;
+  background-color: rgba(201, 146, 234, 1);
+
+}
+
+.purple_footer p {
+  color: #FFFFFF;
+  padding: 15px;
+  text-align: center;
+  font-size: .8em;
+  line-height: normal;
+}
+
+/* FOOTER */
+.footer_banner {
+  display: flex;
+  ;
+  background-image: url("/_images/submenu-banner.png");
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_column {
+  width: 33%;
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+}
+
+.footer_column a {
+  padding: 10px 20px;
+}
+
+.footer_column .social_footer img {
+  height: 2em;
+}
+
+.footer_column .footer_logo {
+  height: 2.5em;
+}
+
+.footer_author span {
+  display: inline-block;
+  float: left;
+}
+
+/* Clear floats after the columns */
+.footer_banner:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/****************************************************************/
+/*************** MOBILE FORMAT @MEDIA ***************************/
+/****************************************************************/
+/* When the screen is less than 640 pixels wide, hide all links, except for the first one ("LOGO"). Show hamburger icon */
+@media screen and (max-width: 640px) {
+  .navbar {
+    background-color: #A5D8D9;
+    overflow: hidden;
+  }
+
+  /* Style the links inside the navigation bar */
+  .navbar a {
+    padding: 10px 16px;
+    color: #FFFFFF;
+    display: inline-flex;
+  }
+
+  /* Change the color of links on hover */
+  .navbar a:hover {
+    background-color: #C992EA;
+    color: white;
+  }
+
+  /* Ensuring title is on one line */
+  .navbar .title {
+    overflow: hidden;
+  }
+
+  .navbar .second_slice {
+    display: inline-block;
+    font-family: Arial;
+    font-size: 24px;
+    margin-right: 10px;
+    color: white;
+  }
+
+  .navbar .cafe {
+    display: inline-block;
+    font-family: Boulevard Script;
+    font-size: 30px;
+    color: white;
+  }
+
+  .navbar .menu_items {
+    background-color: white;
+  }
+
+  .navbar .menu_items a {
+    color: #66412E;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  /* Creating under border for menu items */
+  .navbar .menu_words a {
+    border-bottom: 1px solid #66412E;
+    padding-left: 30px;
+  }
+
+  .navbar .social_items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 0px solid #FFFFFF;
+    margin-top: 20px;
+  }
+
+  /* Style the hamburger icon */
+  .hamburger_icon div {
+    width: 30px;
+    height: 3px;
+    background-color: #FFFFFF;
+    margin: 4px 0;
+  }
+
+  /* Hide the hamburger icon for larger viewports */
+  .navbar .icon {
+    display: none;
+  }
+
+  .navbar .menu_items,
+  .navbar .social_icon {
+    display: none;
+    background-color: white;
+  }
+
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to navbar with JavaScript for the hamburger menu function. */
+.navbar.responsive {
+  position: relative;
+}
+
+.navbar.responsive a.icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.navbar.responsive .menu_items {
+  display: block;
+}
+
+.navbar.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
+/* Hide logo in mobile view */
+.colour_logo img {
+  display: none;
+}
+
+/* Responsive flexbox */
+.flex_cont {
+  flex-direction: column;
+}
+
+.call_to_action {
+  top: 70%;
+  left: 50%;
+}
+/****************************************************************/
+/*************** TABLET FORMAT ONLY *****************************/
+/****************************************************************/
+@media screen and (min-width: 641px) and (max-width:767px) {
+  .navbar a {
+    font-size: 2.8vw;
+  }
+
+  /*
+  .call_to_action {
+  top: 70%;
+  left: 50%;
+  }
+*/
+}
+/****************************************************************/
+/*************** TABLET/DESKTOP SHARED **************************/
+/****************************************************************/
+@media screen and (min-width: 641px) {
+
+  /* Hide mobile viewport .social_items and .title */
+  .navbar .social_items {
+    display: none;
+  }
+
+  .navbar .title {
+    display: none;
+  }
+
+  .header {
+    position: relative;
+  }
+
+  .navbar {
+    background-color: rgba(68, 89, 89, .3);
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+  }
+
+  /* Center menu items and format */
+  .navbar .menu_words {
+    background-color: rgba(165, 216, 217, .6);
+    display: flex;
+    border: 2.5px solid #FFFFFF;
+    border-radius: 20px;
+    width: 95%;
+    margin: 10px 20px;
+    padding: 15px 0;
+  }
+
+  .navbar a {
+    color: #FFFFFF;
+    padding: 0 14px;
+  }
+
+  .navbar a:hover {
+    text-decoration: underline;
+    color: #C992EA;
+    font-weight: bold;
+    transition: .3s ease-in-out;
+  }
+
+  /* Responsive flexbox 3 columns */
+  .flex_cont {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .flex_left {
+    flex: 33%;
+  }
+
+  .flex_center {
+    flex: 33%;
+  }
+
+  .flex_right {
+    flex: 33%;
+  }
+}
+/****************************************************************/
+/*************** DESKTOP FORMAT *********************************/
+/****************************************************************/
+@media screen and (min-width: 768px) {
+
+  /* Place Logo beside nav menu items */
+  .colour_logo img {
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 120px;
+  }
+
+  .navbar {
+    height: 100px;
+  }
+
+  .navbar .menu_words {
+    justify-content: center;
+    align-content: center;
+    float: right;
+    vertical-align: middle;
+    font-size: 2.8em;
+  }
+
+
+}
+
+/****************************************************************/
+/*************** MAX WIDTH FOR HERO TEXT ************************/
+/****************************************************************/
+@media screen and (min-width: 1100px) {
+  .hero_text {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-size: 3.6em;
+  }
+}
